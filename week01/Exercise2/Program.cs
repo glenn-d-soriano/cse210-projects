@@ -33,7 +33,7 @@ class Program
         }
 
         // Print the letter grade
-        Console.WriteLine("Your letter grade is: " + letter);
+        Console.WriteLine($"Your grade is: {letter}");
 
         // Check if the user passed or failed the course
         if (grade >= 70)
