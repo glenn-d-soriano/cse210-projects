@@ -40,7 +40,7 @@ class Program
                 }
             }
 
-            // Calculate the average
+            // Calculate the average/ double is better that float
             double average = (double)sum / numbers.Count;
 
             // Output the results
