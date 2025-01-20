@@ -1,5 +1,5 @@
 using System;
-
+//Save or load journal entries to JSON for storage for possible extra points
 class Program
 {
     static void Main(string[] args)
