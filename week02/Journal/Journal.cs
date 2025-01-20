@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+//Save or load journal entries to JSON for storage.
 using System.Text.Json;
 
 public class Journal
