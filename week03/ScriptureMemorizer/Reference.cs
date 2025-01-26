@@ -1,12 +1,16 @@
-class ScriptureReference
+public class Reference
 {
-    private string book;
-    private int startChapter;
-    private intstartVerse;
-    private int endVerse;
+    
+    public string Book { get; private set; }
+    public int Chapter { get; private set; }
+    public int Verse { get; private set; }
+    public int? EndVerse { get; private set; }  
 
-    publicl ScriptureReference(string book, int chapt, int verse)ddd3e;
-
-
-
-}
+    
+    public Reference(string book, int chapter, int verse)
+    {
+        Book = book;
+        Chapter = chapter;
+        Verse = verse;
+        EndVerse = null;  
+    }
