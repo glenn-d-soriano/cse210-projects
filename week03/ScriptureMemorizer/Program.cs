@@ -16,15 +16,17 @@ public class Program
                           "Blessed are the poor in spirit, for theirs is the kingdom of heaven."),  
         };                  
 
+        Random rand = new Random();
+        
         Scripture selectedScripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
 
         Console.WriteLine("Scripture to memorize:");
-        Console.WriteLine(scripture.GetDisplayText());
+        Console.WriteLine(selectedScripture.GetDisplayText());
 
-        Random rand = new Random();
+        
 
         // Hide some words and display the updated scripture
-        while (!scripture.IsCompletelyHidden())
+        while (!selectedScripture.IsCompletelyHidden())
         {
             Console.WriteLine("\nPress Enter to hide a random word, or type 'quit' to exit.");
             string userInput = Console.ReadLine();
@@ -38,11 +40,11 @@ public class Program
 
             
             Console.Clear();
-            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine(selectedScripture.GetDisplayText());
         }
 
         
-        if (scripture.IsCompletelyHidden())
+        if (selectedScripture.IsCompletelyHidden())
         {
             Console.WriteLine("\nAll words are hidden. Memorization complete!");
         }
