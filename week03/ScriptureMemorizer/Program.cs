@@ -8,7 +8,8 @@ public class Program
         string reference = "John 3:16-17";
         string text = "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.";
 
-        Scripture scripture = new Scripture(reference, text);
+        Reference scriptureReference = new Reference("John", 3, 16, 17);
+        Scripture scripture = new Scripture(scriptureReference, text);
 
         
         Console.WriteLine("Scripture to memorize:");
