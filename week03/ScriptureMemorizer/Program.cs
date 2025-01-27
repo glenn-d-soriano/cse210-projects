@@ -1,17 +1,23 @@
 using System;
 
+//added random list of scripture for extra points
 public class Program
 {
     public static void Main(string[] args)
     {
-        // Scripture reference
-        string reference = "John 3:16-17";
-        string text = "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.";
+        // Scripture reference list
+        List<Scripture> scriptureLibrary = new List<Scripture>
+        {
+            new Scripture(new Reference("John", 3, 16, 17),
+                          "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life."),
+            new Scripture(new Reference("Psalm", 23, 1),
+                          "The Lord is my shepherd; I shall not want."),
+            new Scripture(new Reference("Matthew", 5, 3),
+                          "Blessed are the poor in spirit, for theirs is the kingdom of heaven."),  
+        };                  
 
-        Reference scriptureReference = new Reference("John", 3, 16, 17);
-        Scripture scripture = new Scripture(scriptureReference, text);
+        Scripture selectedScripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
 
-        
         Console.WriteLine("Scripture to memorize:");
         Console.WriteLine(scripture.GetDisplayText());
 
@@ -28,8 +34,7 @@ public class Program
                 break;
             }
 
-            
-            scripture.HideRandomWord(rand);
+            selectedScripture.HideRandomWord(rand);
 
             
             Console.Clear();
