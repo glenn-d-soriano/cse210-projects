@@ -4,6 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+        Console.WriteLine("     /\\");
+        Console.WriteLine("    /  \\");
+        Console.WriteLine("   /    \\");
+        Console.WriteLine("  /______\\");
+
+        Console.ReadLine();
+
     }
+        
+
+    
+
+
+
+
 }
+
