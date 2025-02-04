@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {
         // Create video objects
-        Video video1 = new Video("How to Code in C#", "Glenn Soriano", 300);
+        Video video1 = new Video("YouTube Video Tracker", "Glenn Soriano", 300);
         Video video2 = new Video("Learn Data Structures", "Aiath Soriano", 450);
         Video video3 = new Video("Understanding Algorithms", "Aizen Soriano", 600);
 
