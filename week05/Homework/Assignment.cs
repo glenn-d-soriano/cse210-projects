@@ -3,17 +3,21 @@ public class Assignment
     private String _studentName;
     private String _topic;
 
-    public Assignment (string _studentName, string _topic)
+    public Assignment (string studentName, string topic)
     {
 
-        _studentName = _studentName;
-        _topic = _topic;
+        _studentName = studentName;
+        _topic = topic;
     
     }
 
-    public string Getsummary()
+    public string GetSummary()
     {
 
         return $"{_studentName} - {_topic}";
+    }
+    public string GetStudentName()  
+    {
+        return _studentName;
     }
 }

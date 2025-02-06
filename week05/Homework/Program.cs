@@ -4,6 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(5/2.0);
+        // Testing the base class
+        Assignment assignment = new Assignment("Samuel Bennett", "Multiplication");
+        Console.WriteLine(assignment.GetSummary());
+
+        // Testing the MathAssignment class
+        MathAssignment mathAssignment = new MathAssignment("Roberto Rodriguez", "Fractions", "7.3", "8-19");
+        Console.WriteLine(mathAssignment.GetSummary());
+        Console.WriteLine(mathAssignment.GetHomeworkList());
+
+        // Testing the WritingAssignment class
+        WritingAssignment writingAssignment = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
+        Console.WriteLine(writingAssignment.GetSummary());
+        Console.WriteLine(writingAssignment.GetWritingInformation());
     }
 }
