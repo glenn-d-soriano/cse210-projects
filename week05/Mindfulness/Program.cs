@@ -1,40 +1,44 @@
 using System;
 using System.Threading;
 
-public class MindfulnessActivity
+class Program
 {
-    protected int durationInSeconds; // This will hold the duration for each activity.
-
-    // This method starts the activity, asks the user for the duration, and prepares them to start.
-    public void StartActivity(string activityName, string description)
+    static void Main(string[] args)
     {
-        Console.Clear();
-        Console.WriteLine($"Welcome to the {activityName} Activity!");
-        Console.WriteLine(description);
-        Console.Write("Please enter the duration (in seconds): ");
-        durationInSeconds = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Get ready to begin...");
-        Pause(3); // Pause for 3 seconds before starting the activity.
-    }
-
-    // This method pauses the program for a specified number of seconds, showing "..." to the user.
-    public void Pause(int seconds)
-    {
-        for (int i = 0; i < seconds; i++)
+        while (true)
         {
-            Console.Write(".");
-            Thread.Sleep(1000); // Wait for 1 second
-        }
-        Console.WriteLine();
-    }
+            Console.Clear();
+            Console.WriteLine("Welcome to the Mindfulness Program");
+            Console.WriteLine("1. Breathing Activity");
+            Console.WriteLine("2. Reflection Activity");
+            Console.WriteLine("3. Listing Activity");
+            Console.WriteLine("4. Exit");
+            Console.Write("Select an activity: ");
+            
+            string choice = Console.ReadLine();
 
-    // This method ends the activity and shows a message with the duration.
-    public void EndActivity()
-    {
-        Console.WriteLine("Great job! You've completed the activity.");
-        Pause(3);
-        Console.WriteLine($"You spent {durationInSeconds} seconds on this activity.");
-        Pause(3);
+            MindfulnessActivity activity = null;
+            
+            switch (choice)
+            {
+                case "1":
+                    activity = new BreathingActivity();
+                    break;
+                case "2":
+                    activity = new ReflectionActivity();
+                    break;
+                case "3":
+                    activity = new ListingActivity();
+                    break;
+                case "4":
+                    return; // Exit the program
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    continue;
+            }
+
+            // Start the selected activity
+            activity.Start();
+        }
     }
 }
