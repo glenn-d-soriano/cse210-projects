@@ -49,7 +49,7 @@ public abstract class MindfulnessActivity
     {
         Console.WriteLine("Well done! You've completed the activity.");
         Console.WriteLine($"You spent {durationInSeconds} seconds on this activity.");
-        Thread.Sleep(2000); // pause for a couple of seconds before finishing
+        Thread.Sleep(2000); 
     }
 
     // Method to simulate a pause (animation, spinner, or countdown)
