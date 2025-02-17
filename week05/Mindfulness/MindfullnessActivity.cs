@@ -27,7 +27,7 @@ public abstract class MindfulnessActivity
     private void SetDuration()
     {
         Console.Write("Please enter the duration of the activity in seconds: ");
-        durationInSeconds = int.Parse(Console.ReadLine());
+        _durationInSeconds = int.Parse(Console.ReadLine());
     }
 
     // Method to pause before starting the activity
@@ -49,7 +49,7 @@ public abstract class MindfulnessActivity
     protected void DisplayEndMessage()
     {
         Console.WriteLine("Well done! You've completed the activity.");
-        Console.WriteLine($"You spent {durationInSeconds} seconds on this activity.");
+        Console.WriteLine($"You spent {_durationInSeconds} seconds on this activity.");
         Thread.Sleep(2000); 
     }
 

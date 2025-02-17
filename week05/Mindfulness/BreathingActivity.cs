@@ -7,7 +7,7 @@ public class BreathingActivity : MindfulnessActivity
         Console.WriteLine("This activity will help you relax by guiding you through deep breathing.");
         
         // Calculate number of cycles (e.g., 5-second intervals)
-        int cycles = durationInSeconds / 5; 
+        int cycles = _durationInSeconds / 5; 
 
         for (int i = 0; i < cycles; i++)
         {

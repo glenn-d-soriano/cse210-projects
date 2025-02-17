@@ -18,7 +18,7 @@ public class ListingActivity : MindfulnessActivity
 
         Console.WriteLine("Start listing now! Press 'Enter' after each item.");
         int itemsListed = 0;
-        DateTime endTime = DateTime.Now.AddSeconds(durationInSeconds);
+        DateTime endTime = DateTime.Now.AddSeconds(_durationInSeconds);
         
         while (DateTime.Now < endTime)
         {
