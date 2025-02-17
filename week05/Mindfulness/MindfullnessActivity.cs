@@ -1,9 +1,10 @@
+
 using System;
 using System.Threading;
 
 public abstract class MindfulnessActivity
 {
-    protected int durationInSeconds;
+    protected int _durationInSeconds;
 
     public void Start()
     {

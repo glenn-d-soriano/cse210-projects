@@ -1,3 +1,5 @@
+
+// updated line 7 under Mindfullness Activity for _underscoreCamelCase
 using System;
 using System.Threading;
 
