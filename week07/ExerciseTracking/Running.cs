@@ -29,3 +29,4 @@ public class Running : Activity
     public override string GetDistanceUnits() { return "miles"; }
     public override string GetSpeedUnits() { return "mph"; }
     public override string GetPaceUnits() { return "min per mile"; }
+} 
